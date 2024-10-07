@@ -30,4 +30,4 @@ function verifierIdentification($loginSaisi,$mdpSaisi) {
  * @param aucun
  * @return un curseur contenant l'ensemble des lignes à afficher
 */
-
+?>
