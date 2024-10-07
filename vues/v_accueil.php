@@ -11,7 +11,11 @@
 
 <body>
     <h1>Bienvenue au centre hospitalier de LEIDOSCOPE</h1>
-    
+
+    <p>
+        Pour consulter vos préscriptions veuillez vous connectez avec le bouton ci-dessous
+    </p>
+    <button>Se connecter</button>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="includes/js/connexionstyle.js"></script>
