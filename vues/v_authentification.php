@@ -1,16 +1,24 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="utf-8">
-    <title>Connexion</title>
-    <link type="text/css" rel="stylesheet" href="includes/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="includes/css/dashboard.css">
-    <link rel="icon" href="logo.png" width="16" height="16">
-</head>
-
-<body>
-</body>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="includes/js/connexionstyle.js"></script>
-</html>
+<form action="" method="post" name="connect">
+  <p align="center" class="titre"><strong>- : : : ESPACE SECURISE : : : -</strong></p>
+  <p align="center"><u>Authentification s&eacute;curis&eacute;e utilisant :</u><br>
+    - BDD MySQL<br>
+    - Sessions PHP c&ocirc;t&eacute; serveur <br>
+  - Cryptage des mots de passe par sha1</p>
+ 
+  <table width="300"  border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#eeeeee" class="tableaux">
+    <tr>
+      <td width="50%""><div align="right">login</div></td>
+      <td width="50%"><input name="login" type="text" id="login"></td>
+    </tr>
+    <tr>
+      <td width="50%""><div align="right">mot de passe</div></td>
+      <td width="50%"><input name="pass" type="password" id="pass"></td>
+    </tr>
+    <tr>
+      <td height="34" colspan="2"><div align="center">
+          <input type="submit" name="Submit" value="Se connecter">
+      </div></td>
+    </tr>
+  </table>
+</form>
