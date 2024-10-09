@@ -12,6 +12,10 @@ switch ($uc)
         include "c_accueil.php" ;
         break ;
     }
+    case "connexion" : {
+        include "c_authentification.php";
+        break;
+    }
 }
 
 ?>
