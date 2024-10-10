@@ -4,5 +4,5 @@
     <p>
         Pour consulter vos préscriptions veuillez vous connectez avec le bouton ci-dessous
     </p>
-    <a href="index.php?uc=connexion&action=verifier"><button>Se connecter</button></a>
+    <a href="index.php?uc=connexion&action=afficher"><button>Se connecter</button></a>
 </div>

@@ -16,6 +16,18 @@ switch ($uc)
         include "c_authentification.php";
         break;
     }
+    case "admin" : {
+        include "c_admin.php";
+        break;
+    }
+    case "VALIDATION" : {
+        include "vues/v_valid.php";
+        break;
+    }
+    case "ERREUR" : {
+        include "vues/v_erreur.php";
+        break;
+    }
 }
 
 ?>

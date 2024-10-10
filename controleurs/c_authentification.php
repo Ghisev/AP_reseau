@@ -11,18 +11,28 @@ else
 switch ($action)
 {
     case "verifier" : {
-        // $loginSaisi = $_POST['login'];
-        // $mdpSaisi = md5($_POST['mdp']);
-        // if(verifierIdentification($loginSaisi, $mdpSaisi))
-        // {
-        //     header ("Location: index.php");
-        // }
-        // else
-        // {
-        //     session_destroy();
-        //     header ("Location: index.php?uc=acceuil");
-        // }
-        require "vues/v_authentification.php";
+        $loginSaisi = $_POST['login'];
+        $mdpSaisi = md5($_POST['pass']);
+        if(verifierIdentificationAdm($loginSaisi,$mdpSaisi))
+        {
+            header ("Location: index.php?uc=admin");
+        }
+        else
+        {
+            if(verifierIdentificationClt($loginSaisi, $mdpSaisi))
+            {
+                header ("Location: index.php?uc=accueil&action=client&lgnPt=$loginSaisi");
+            }
+            else
+            {
+                session_destroy();
+                header ("Location: index.php?uc=accueil");
+            }
+        }
+        break;
+    }
+    case "afficher" : {
+        include "vues/v_authentification.php";
         break;
     }
 }

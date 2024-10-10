@@ -11,5 +11,11 @@ switch ($action)
         require "vues/v_accueil.php";
         break ;
     }
+    case "client" : {
+        $lgn = $_REQUEST['lgnPt'];
+        $idPt = getIdPt($lgn);
+        require "vues/v_afficherMdctns.php";
+        break ;
+    }
 }
 ?>

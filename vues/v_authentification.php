@@ -1,10 +1,7 @@
 
-<form action="" method="post" name="connect">
+<form action="index.php?uc=connexion&action=verifier" method="POST" name="connect">
   <p align="center" class="titre"><strong>- : : : ESPACE SECURISE : : : -</strong></p>
-  <p align="center"><u>Authentification s&eacute;curis&eacute;e utilisant :</u><br>
-    - BDD MySQL<br>
-    - Sessions PHP c&ocirc;t&eacute; serveur <br>
-  - Cryptage des mots de passe par sha1</p>
+  <p align="center"><u>Authentification s&eacute;curis&eacute;e</u><br>
  
   <table width="300"  border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#eeeeee" class="tableaux">
     <tr>

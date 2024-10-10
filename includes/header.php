@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="includes/img/mb.png" width="16" height="16">
 
-    <title>Garage</title>
+    <title>LEIDOSCOPE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="includes/css/bootstrap.min.css" rel="stylesheet">
