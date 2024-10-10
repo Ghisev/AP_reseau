@@ -83,7 +83,7 @@ switch ($action)
         $idM = $_REQUEST['idM'];
         $qM = $_REQUEST['qM'];
         suppMedction($idP, $idM, $qM);
-        include "vues/v_choixAdmin.php";
+        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=$idP");
         break;
     }
     case "modif" : {
@@ -100,7 +100,7 @@ switch ($action)
         $idM = $_REQUEST['idM'];
         $qM = $_REQUEST['qM'];
         modifMedction($idP, $idM, $qM);
-        include "vues/v_choixAdmin.php";
+        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=$idP");
         break;
     }
     case "ajouterMdction" : {
@@ -108,7 +108,7 @@ switch ($action)
         $idM = $_REQUEST['idmed'];
         $qM = $_REQUEST['qtem'];
         addMdction($idP, $idM, $qM);
-        include "vues/v_choixAdmin.php";
+        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=$idP");
         break;
     }
 }

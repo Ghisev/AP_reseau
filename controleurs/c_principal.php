@@ -28,6 +28,9 @@ switch ($uc)
         include "vues/v_erreur.php";
         break;
     }
+    case "deconnexion" : {
+        break;
+    }
 }
 
 ?>
