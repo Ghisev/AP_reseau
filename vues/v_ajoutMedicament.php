@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION['lgn'])) {
+        header ("Location: index.php");
+    }
+?>
 <div class="home">
     <h1>Veuillez Ajouter le Médicament</h1>
 

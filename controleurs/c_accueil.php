@@ -13,7 +13,7 @@ switch ($action)
     }
     case "client" : {
         $lgn = $_REQUEST['lgnPt'];
-        $idPt = getIdPt($lgn);
+        $_SESSION['idPt'] = getIdPt($lgn);
         require "vues/v_afficherMdctns.php";
         break ;
     }

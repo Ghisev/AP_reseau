@@ -17,11 +17,11 @@ switch ($action)
         break;
     }
     case "verifierCreationAdm" : {
-        $id = $_POST['id'];
-        $mdp = md5($_POST['pw']);
-        if(!verifExisteAdm($id))
+        $_SESSION['id'] = $_POST['id'];
+        $_SESSION['mdp'] = md5($_POST['pw']);
+        if(!verifExisteAdm($_SESSION['id']))
         {
-            creationAdmin($id,$mdp);
+            creationAdmin($_SESSION['id'],$_SESSION['mdp']);
             header ("Location: index.php?uc=VALIDATION");
         }
         else
@@ -37,11 +37,11 @@ switch ($action)
     case "verifierCreationClt" : {
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
-        $id = substr($nom,0,3).$prenom;
-        $mdp = md5($id);
-        if(!verifExisteClt($id))
+        $_SESSION['id'] = substr($nom,0,3).$prenom;
+        $_SESSION['mdp'] = md5($_SESSION['id']);
+        if(!verifExisteClt($_SESSION['id']))
         {
-            creationPatient($id,$mdp,$nom,$prenom);
+            creationPatient($_SESSION['id'],$_SESSION['mdp'],$nom,$prenom);
             header ("Location: index.php?uc=VALIDATION");
         }
         else
@@ -79,36 +79,36 @@ switch ($action)
         break;
     }
     case "supp" : {
-        $idP = $_REQUEST['idP'];
-        $idM = $_REQUEST['idM'];
-        $qM = $_REQUEST['qM'];
-        suppMedction($idP, $idM, $qM);
-        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=$idP");
+        $_SESSION['idP'] = $_REQUEST['idP'];
+        $_SESSION['idM'] = $_REQUEST['idM'];
+        $_SESSION['qM'] = $_REQUEST['qM'];
+        suppMedction($_SESSION['idP'], $_SESSION['idM'], $_SESSION['qM']);
+        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=".$_SESSION['idP']);
         break;
     }
     case "modif" : {
-        $idP = $_REQUEST['idP'];
-        $idM = $_REQUEST['idM'];
-        $qM = $_REQUEST['qM'];
+        $_SESSION['idP'] = $_REQUEST['idP'];
+        $_SESSION['idM'] = $_REQUEST['idM'];
+        $_SESSION['qM'] = $_REQUEST['qM'];
         $Meds = getMedocs();
         $Qtes = getQtes();
         include "vues/v_modifMed.php";
         break;
     }
     case "modifVerif" : {
-        $idP = $_REQUEST['idP'];
-        $idM = $_REQUEST['idM'];
-        $qM = $_REQUEST['qM'];
-        modifMedction($idP, $idM, $qM);
-        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=$idP");
+        $_SESSION['idP'] = $_REQUEST['idP'];
+        $_SESSION['idM'] = $_REQUEST['idM'];
+        $_SESSION['qM'] = $_REQUEST['qM'];
+        modifMedction($_SESSION['idP'], $_SESSION['idM'], $_SESSION['qM']);
+        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=".$_SESSION['idP']);
         break;
     }
     case "ajouterMdction" : {
-        $idP = $_REQUEST['idPt'];
-        $idM = $_REQUEST['idmed'];
-        $qM = $_REQUEST['qtem'];
-        addMdction($idP, $idM, $qM);
-        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=$idP");
+        $_SESSION['idP'] = $_REQUEST['idPt'];
+        $_SESSION['idM'] = $_REQUEST['idmed'];
+        $_SESSION['qM'] = $_REQUEST['qtem'];
+        addMdction($_SESSION['idP'], $_SESSION['idM'], $_SESSION['qM']);
+        header ("Location: index.php?uc=admin&action=afficherMedocs&patient=".$_SESSION['idP']);
         break;
     }
 }

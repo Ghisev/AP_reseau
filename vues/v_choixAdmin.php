@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION['lgn'])) {
+        header ("Location: index.php");
+    }
+?>
 <div class="home">
     <h1>Bonjour cher Administrateur</h1>
 
@@ -8,4 +13,5 @@
     <a href="index.php?uc=admin&action=creerClt"><button>Créer un Patient</button></a>
     <a href="index.php?uc=admin&action=ajoutMdcmt"><button>Ajouter un Médicament</button></a>
     <a href="index.php?uc=admin&action=gerer"><button>Gérer une Médication</button></a>
+    <a href="index.php?uc=deconnexion"><button>Déconnexion</button></a>
 </div>
